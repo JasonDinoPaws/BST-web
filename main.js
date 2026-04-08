@@ -34,24 +34,28 @@ function update(){
     root.Draw(0,0)
 }
 
-function add(value){
-    let display = value;
+function add(values){
+    values = values.split(",");
+    let display;
 
-    if (isNaN(value)){
-        value = 0;
-        for (let i = 0; i < display.length; i++) {
-            value += display.charCodeAt(i)
+    values.forEach((value)=>{
+        display = value;
+        if (isNaN(value)){
+            value = 0;
+            for (let i = 0; i < values.length; i++) {
+                value += values.charCodeAt(i)
+            }
+        } else{
+            value = Number(value)
         }
-    } else{
-        value = Number(value)
-    }
-    if (!root){
-        Createsvg()
-        root = new node(value,display);
-    } else{
-        root.add(value,display)
-    }
-    update()
+        if (!root){
+            Createsvg()
+            root = new node(value,display);
+        } else{
+            root.add(value,display)
+        }
+        update()
+    })
 }
 function search(value){
     if (root === null){
