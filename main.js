@@ -26,11 +26,11 @@ function Createsvg(){
 }
 
 function update(){
+    Createsvg()
     if (root == null){ return }
     inorder.innerHTML = "Inorder: "+root.Inorder().join(", ")
     preorder.innerHTML = "Preorder: "+root.Preorder().join(", ")
     postorder.innerHTML = "Postorder: "+root.Postorder().join(", ")
-    Createsvg()
     root.Draw(0,0)
 }
 
@@ -63,11 +63,12 @@ function search(value){
 function Delete(value){
     let nodes = search(value)    
     let node = nodes[nodes.length-1];
-    let children = node.getchildren();
+    let children = [];
     if (nodes.length <= 1){
-         root = null; 
+        root = null;
     }
     else {
+        children = node.getchildren();
         let prev = nodes[nodes.length-2];
 
         if (prev.getleft() == node){
