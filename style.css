@@ -1,0 +1,155 @@
+body{background-color: black;}
+
+/* Tree Style */
+.Tree{
+    background-color: rgba(21, 0, 255, 0.142);
+    width: 82.5%;
+    height: 98%;
+    right: 0;
+    top: 1%;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.Tree svg{
+    position:absolute;
+    top:0;
+    left:0; 
+    width:100%; 
+    height:100%;
+}
+.Node{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+      border-radius: 100px; 
+    background-color: white;
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+line{
+    stroke: gray;
+    stroke-width: 10;
+}
+
+/* Tree Info */
+.ibutton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: white;
+    border: 0px;
+}
+.idiv{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: auto;
+    height: auto;
+    background-color: darkslategrey;
+    display: none;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.idiv h2{
+    color: white;
+    text-align: left;
+    width: 100%;
+    height: 25%;
+    line-height: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+.ibutton:hover + .idiv { display: block; }
+
+
+/* Inputs */
+.Inputs{
+   background-color: rgba(66, 66, 66, 0.359);
+    width: 15%;
+    height: auto;
+    top: 1%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    justify-content: flex-start;
+    justify-content: center;
+}
+.Inputs div{
+    width: 100%;
+    height: auto; 
+    text-align: center;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+input{
+    width:50%;
+    height: 50%;
+    border: 0px;
+    border-radius: 5px;
+    background-color: darkgray;
+    color: black;
+    text-align: center;
+}
+input:focus {
+  background-color: gray; /* Changes the background when the input is selected */
+  outline: none; /* Removes the default browser outline */
+}
+input:hover {
+  background-color: gray; /* Changes the background when the input is selected */
+  outline: none; /* Removes the default browser outline */
+}
+.Inputs Button{
+    width: auto;
+    height: 50%;
+    background-color: darkgreen;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+.Inputs h2{
+    width: 100%;
+    height: 50%;
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+.Inputs hr{
+    width: 75%;
+    margin: 0px, 12.5%;
+}
+
+
+/* Code Display */
+.Code{
+    width:15%;
+    height: inherit;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    background-color: rgba(21, 0, 255, 0.142);
+}
+.Code h2{
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    line-height: 15px;
+}
+.Code div{
+    width: 100%;
+    height: 90%;
+    background-color: rgba(21, 0, 255, 0.142);
+}
